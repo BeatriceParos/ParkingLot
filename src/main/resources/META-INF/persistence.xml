@@ -5,5 +5,7 @@
              version="3.0">
     <persistence-unit name="default">
 
+        <class>com.parkin.parkinglot.entities.User</class>
+        <class>com.parkin.parkinglot.entities.Car</class>
     </persistence-unit>
 </persistence>
