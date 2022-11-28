@@ -1,7 +1,6 @@
 package com.parkin.parkinglot.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class Car {
@@ -14,5 +13,39 @@ public class Car {
 
     public void setOwner(User owner) {
         this.owner = owner;
+    }
+
+    private Long id;
+
+    @GeneratedValue
+    @Id
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    private String licencePlate;
+
+    @Basic
+    public String getLicencePlate() {
+        return licencePlate;
+    }
+
+    public void setLicencePlate(String licencePlate) {
+        this.licencePlate = licencePlate;
+    }
+
+    private String parkingSpot;
+
+    @Basic
+    public String getParkingSpot() {
+        return parkingSpot;
+    }
+
+    public void setParkingSpot(String parkingSpot) {
+        this.parkingSpot = parkingSpot;
     }
 }
