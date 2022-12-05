@@ -29,11 +29,6 @@ public class Car {
 
     private String licencePlate;
 
-    @Basic
-    public String getLicencePlate() {
-        return licencePlate;
-    }
-
     public void setLicencePlate(String licencePlate) {
         this.licencePlate = licencePlate;
     }
@@ -47,5 +42,9 @@ public class Car {
 
     public void setParkingSpot(String parkingSpot) {
         this.parkingSpot = parkingSpot;
+    }
+
+    public String getLicencePlate() {
+        return licencePlate;
     }
 }
