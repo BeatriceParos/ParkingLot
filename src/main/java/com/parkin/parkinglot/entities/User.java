@@ -50,4 +50,16 @@ public class User {
     private String password;
     private Collection<Car> cars;
 
+
+
+    private Collection<Car> car; //oneToMany
+
+    @OneToMany(mappedBy = "owner")
+    public Collection<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(Collection<Car> cars) {
+        this.cars = cars;
+    }
 }

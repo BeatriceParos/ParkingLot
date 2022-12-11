@@ -8,6 +8,7 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "Cars", value = "/Cars")
@@ -28,6 +29,15 @@ public class Cars extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String[] car_ids_as_String;
+        car_ids_as_String = request.getParameterValues("car_ids");
+        if(car_ids_as_String != null){
+            List<Long> car_ids = new ArrayList<>();
+            for(String car_id_String : car_ids_as_String){
+                car_ids.add(Long.parseLong(car_id_String));
+            }
+            carsBean.deleteCarsByIds(car_ids);
+        }
+        response.sendRedirect(request.getContextPath() + "/Cars");
     }
 }
