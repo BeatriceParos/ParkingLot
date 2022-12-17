@@ -1,6 +1,6 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <t:pageTemplate pageTitle="addCar">
     <h1>Add Car</h1>
     <form class="needs-validation" novalidate method="POST" action="${pageContext.request.contextPath}/AddCar">
@@ -28,7 +28,7 @@
                 <div class="invalid-feedback">
                     Please select an owner!
                 </div>
-
+                <hr class="nb-4">
                 <button class="btn btn-primary btn-lg" type="submit">Save</button>
             </div>
         </div>

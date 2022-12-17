@@ -4,18 +4,25 @@
 
 <t:pageTemplate pageTitle="Users">
   <h1>Users</h1>
+  <c:if test="${pageContext.request.isUserInRole('WRITE_USERS')}">
+    <a href="${pageContext.request.contextPath}/AddUser" class="btn btn-primary btn-lg">Add User</a>
+  </c:if>
   <div class="container text-center">
-    <c:forEach var="user" items="${users}">
-      <div class="row">
-        <div class="col">
-            ${user.username}
+    <div class="container text-center">
+      <c:forEach var="user" items="${users}">
+        <div class="row">
+          <div class="col">
+              ${user.id}
+          </div>
+          <div class="col">
+              ${user.username}
+          </div>
+          <div class="col">
+              ${user.email}
+          </div>
         </div>
-        <div class="col">
-            ${user.email}
-        </div>
-      </div>
-    </c:forEach>
+      </c:forEach>
+    </div>
   </div>
 </t:pageTemplate>
-
 

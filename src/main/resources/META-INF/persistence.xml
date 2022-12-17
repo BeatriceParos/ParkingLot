@@ -7,6 +7,7 @@
         <jta-data-source>jdbc/ParkingLotResource</jta-data-source>
         <class>com.parkin.parkinglot.entities.User</class>
         <class>com.parkin.parkinglot.entities.Car</class>
+        <class>com.parkin.parkinglot.entities.UserGroup</class>
 
         <properties>
             <property name="jakarta.persistence.schema-generation.database.action" value="create-or-extend-tables" />
